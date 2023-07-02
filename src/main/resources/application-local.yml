@@ -1,0 +1,21 @@
+server:
+  port: 8687
+  servlet:
+    context-path: /api
+
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    open-in-view: true
+    database: mysql
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3309/myProjects?autoReconnect=true&useSSL=false
+    username: root
+    password:
+logging:
+  level:
+    org.springframework.web: DEBUG
+
