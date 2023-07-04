@@ -8,11 +8,9 @@ import com.projects.dtos.EmployeDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
-@Mapper(implementationPackage = "mapper.impl",componentModel = "spring")
+@Mapper
 public interface EmployeMapper {
-
-    UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
-    static EmployeEntity employeDtoToEntity(EmployeDto dto);
+    EmployeEntity employeDtoToEntity(EmployeDto dto);
 
     EmployeDto employeToDto(EmployeEntity employeEntity);
 

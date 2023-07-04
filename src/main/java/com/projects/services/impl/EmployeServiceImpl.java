@@ -23,7 +23,7 @@ public class EmployeServiceImpl implements EmployeService {
     }
 
     public void createEmploye(EmployeDto dto) {
-        employeRepository.save(EmployeMapper.employeDtoToEntity(dto));
+        employeRepository.save(employeMapper.employeDtoToEntity(dto));
 
     }
 

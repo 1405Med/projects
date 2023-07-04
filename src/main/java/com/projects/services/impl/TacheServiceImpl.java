@@ -26,7 +26,7 @@ public class TacheServiceImpl implements TacheService {
         this.tacheMapper = tacheMapper;
     }
 
-    public void creatTache(TacheDto dto) {
+    public void createTache(TacheDto dto) {
         tacheRepository.save(tacheMapper.tacheDtoToEntity(dto));
 
     }

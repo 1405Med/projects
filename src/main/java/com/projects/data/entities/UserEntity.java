@@ -27,12 +27,12 @@ public class UserEntity {
     private String email;
 
     @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "compte_id")
+    @JoinColumn(name = "user_id")
     private List<CompteEntity> compteEntityList;
 
 
     @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "projet_id")
+    @JoinColumn(name = "user_projet_id")
     private List<ProjectEntity> projectEntities;
 
 }

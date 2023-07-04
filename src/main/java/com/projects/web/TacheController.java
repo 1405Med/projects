@@ -43,9 +43,9 @@ public class TacheController {
     }
 
     @PutMapping("/{id}")
-    public void update(@PathVariable("id") Long id, @RequestBody CompteDto dto) {
+    public void update(@PathVariable("id") Long id, @RequestBody TacheDto dto) {
         log.debug("start method update: {}", dto);
-        compteService.updateCompte(id, dto);
+        tacheService.updateTache(id, dto);
     }
 
     @DeleteMapping("/{id}")

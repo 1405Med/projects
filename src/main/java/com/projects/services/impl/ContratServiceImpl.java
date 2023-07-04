@@ -21,7 +21,7 @@ public class ContratServiceImpl implements ContratService {
     private final ContratMapper contratMapper;
 
     @Autowired
-    public ContratServiceImpl(ContratRepository contratRepository, ContratRepository contratRepository) {
+    public ContratServiceImpl(ContratRepository contratRepository, ContratMapper contratMapper) {
         this.contratRepository = contratRepository;
         this.contratMapper = contratMapper;
     }
@@ -29,6 +29,11 @@ public class ContratServiceImpl implements ContratService {
     public void createContrat(ContratDto dto) {
         contratRepository.save(contratMapper.contratDtoToEntity(dto));
 
+    }
+
+    @Override
+    public void updateContrat(Long id, ContratDto dto) {
+        
     }
 
     public void updateContrat(Long id, CompteDto dto) {

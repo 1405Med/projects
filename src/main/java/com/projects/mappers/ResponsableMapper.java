@@ -8,10 +8,8 @@ import com.projects.dtos.ResponsableDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
-@Mapper(implementationPackage = "mapper.impl",componentModel = "spring")
+@Mapper
 public interface ResponsableMapper {
-
-    UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
     ResponsableEntity responsableDtoToEntity(ResponsableDto dto);
 
     ResponsableDto responsableToDto(ResponsableEntity responsableEntity);

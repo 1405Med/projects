@@ -8,11 +8,10 @@ import com.projects.dtos.TacheDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
-@Mapper(implementationPackage = "mapper.impl",componentModel = "spring")
+@Mapper
 public interface TacheMapper {
 
-    UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
-    TacheEntity tacheDtoToEntity(TacheDto dto);
+   TacheEntity tacheDtoToEntity(TacheDto dto);
 
     TacheDto tacheToDto(TacheEntity tacheEntity);
 
